@@ -7,7 +7,7 @@
 
     const projectInfoPeanutz = {
       projectName: "./peanutz_logo.png", 
-      projectDescription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard Lorem Ipsum is simply dummy text of the printing  Lorem Ipsum is simply dummy text of the printing and typesetting industry. ", 
+      projectDescription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard Lorem Ipsum is simply dummy text of the printing  Lorem Ipsum is simply dummy text of the ", 
       projectLinkWeb: "http://www.cashew.io", 
       projectLinkTelegram: "www.telegram/cashue", 
       projectLinkTwitter: "twitter.com/cashue", 
@@ -16,7 +16,7 @@
 
     const projectInfoCashew = {
       projectName: "./cashew_logo.png", 
-      projectDescription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard Lorem Ipsum is simply dummy text of the printing  Lorem Ipsum is simply dummy text of the printing and typesetting industry.  ", 
+      projectDescription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard Lorem Ipsum is simply dummy text of the printing  Lorem Ipsum is simply dummy text of the ", 
       projectLinkWeb: "cashue.io", 
       projectLinkTelegram: "www.telegram/cashue", 
       projectLinkTwitter: "twitter.com/cashue", 
@@ -42,7 +42,7 @@
         <Container fluid style={{ marginTop:"20px",  padding:"50px" , backgroundColor:"#0D3B66" }} >
           <Flex direction="column" justify="center" align="center">
           <Image src="./NutE_Logo.png" alt="NutE Logo" width="190px" height="100%" />
-          <hr />
+  
           <Text>Copyright © 2023 nuteconomy. All Rights Reserved.</Text>
           </Flex>
         </Container>
