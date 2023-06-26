@@ -1,17 +1,22 @@
-import {  Container  } from "@mantine/core";
-
+import { Container, Grid, Text, Title } from "@mantine/core";
+import { HeroImage } from "./components/HeroImage";
+import { Clipboard } from "./components/clipboard";
+import {ClipboardEmpty} from "./components/clipboardEmpty";
 
 export default function Main() {
   return (
     <>
-     <div style={{
-      backgroundImage: `url(./NutE-Hero.png)`,
-      backgroundPosition: 'center',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      width: '100vw',
-      height: '670px',
-    }}/>
+      <Container fluid h={60}></Container>
+      <HeroImage />
+      <Title order={2}>Projects</Title>
+      <Grid>
+        <Grid.Col span={6}><Clipboard/></Grid.Col>
+        <Grid.Col span={6}><Clipboard/></Grid.Col>
+        <Grid.Col span={6}><ClipboardEmpty /></Grid.Col>
+        <Grid.Col span={6}><ClipboardEmpty /></Grid.Col>
+        <Grid.Col span={6}><ClipboardEmpty /></Grid.Col>
+
+      </Grid>
     </>
   );
 }
