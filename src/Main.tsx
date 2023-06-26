@@ -8,6 +8,7 @@ export default function Main() {
     <>
       <Container fluid h={60}></Container>
       <HeroImage />
+      <Container>
       <Title order={2}>Projects</Title>
       <Grid>
         <Grid.Col span={6}><Clipboard/></Grid.Col>
@@ -17,6 +18,7 @@ export default function Main() {
         <Grid.Col span={6}><ClipboardEmpty /></Grid.Col>
 
       </Grid>
+      </Container>
     </>
   );
 }
