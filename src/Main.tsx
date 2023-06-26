@@ -1,4 +1,4 @@
-import { Container, Grid, Text, Title } from "@mantine/core";
+import { Container, Grid,  Title } from "@mantine/core";
 import { HeroImage } from "./components/HeroImage";
 import { Clipboard } from "./components/clipboard";
 import {ClipboardEmpty} from "./components/clipboardEmpty";
