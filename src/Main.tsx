@@ -43,7 +43,7 @@
           <Flex direction="column" justify="center" align="center">
           <Image src="./NutE_Logo.png" alt="NutE Logo" width="190px" height="100%" />
           <hr />
-          <Text>Copyright © 2023 nutecomony. All Rights Reserved.</Text>
+          <Text>Copyright © 2023 nuteconomy. All Rights Reserved.</Text>
           </Flex>
         </Container>
       </>
