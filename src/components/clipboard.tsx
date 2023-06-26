@@ -13,7 +13,6 @@ export interface IclipboardProps {
 
 export function Clipboard(props: IclipboardProps) {
   const theme = useMantineTheme();
-    // const isMobile = useMediaQuery("(max-width: 800px)");
   const isSmall = useMediaQuery("(max-width: 500px)");
 
   return (
@@ -22,22 +21,22 @@ export function Clipboard(props: IclipboardProps) {
       <Box
         style={{
           position: "absolute",
-          width: "85%", height: "85%",
-          top: isSmall ? '40px' : '50px',
-          left: isSmall ? '15px' : '20px',
-          // backgroundColor:
-          //   theme.colorScheme === "dark"
-          //     ? theme.colors.dark[6]
-          //     : theme.colors.gray[0],
+          width: "85%",
+          height: "85%",
+          top: isSmall ? "40px" : "50px",
+          left: isSmall ? "15px" : "20px",
           textAlign: "left",
           padding: theme.spacing.md,
           borderRadius: theme.radius.md,
           cursor: "pointer",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
         }}
       >
         {/* This will now sit over the clipboard image */}
-        <Flex  justify="center" align="center" mih={isSmall ? 80: 120} >
-        <Image src={props.projectName} />
+        <Flex justify="center" align="center" mih={isSmall ? 80 : 120}>
+          <Image src={props.projectName} />
         </Flex>
         <p>{props.projectDescription}</p>
         <Flex justify="space-between" align="center">
@@ -49,28 +48,39 @@ export function Clipboard(props: IclipboardProps) {
           >
             Visit Website
           </Button>
-          <Flex justify="space-between" align="center"  columnGap={isSmall ? '2px' : '8px'}>
+          <Flex
+            justify="space-between"
+            align="center"
+            columnGap={isSmall ? "2px" : "8px"}
+          >
             <Button
               component="a"
               href={props.projectLinkTwitter}
               target="_blank"
               rel="noopener noreferrer"
               variant="link"
-            ><FaTwitter /> </Button>
+            >
+              <FaTwitter />{" "}
+            </Button>
             <Button
               component="a"
               href={props.projectLinkTelegram}
               target="_blank"
               rel="noopener noreferrer"
               variant="link"
-            > <FaTelegram /></Button>
+            >
+              {" "}
+              <FaTelegram />
+            </Button>
             <Button
               component="a"
               href={props.projectLinkdextools}
               target="_blank"
               rel="noopener noreferrer"
               variant="link"
-            ><FaExternalLinkSquareAlt /></Button>
+            >
+              <FaExternalLinkSquareAlt />
+            </Button>
           </Flex>
         </Flex>
       </Box>
