@@ -22,7 +22,7 @@ export default function Main() {
     <Flex
       direction={isMobile ? 'column' : 'row'}
       gap="xl"
-      style={{ color: '#F4D35E', fontSize: 26, fontFamily: 'ADLaM Display', wordWrap: 'break-word' }}
+    
     >
       <Button variant="menu" radius="xl" size="xl" uppercase style={{marginTop: isMobile? 70:0}}>
         <Link to="mainText" smooth duration={500} offset={isMobile ? -70 : -90} onClick={() => setIsOpen(false)}>
@@ -36,7 +36,7 @@ export default function Main() {
         </Link>
       </Button>
   
-      <Button variant="menu" radius="xl" size="xl" uppercase>
+      <Button variant="menu" radius="xl" size="xl" >
         <Link to="Projects" smooth duration={500} offset={isMobile ? -70 : -90} onClick={() => setIsOpen(false)}>
           Projects
         </Link>

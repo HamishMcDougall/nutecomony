@@ -37,13 +37,13 @@ export default function App() {
                   fontFamily: 'ADLaM Display',
                   fontSize: 26,
                   textTransform: 'uppercase',
-                  color: params.color === 'light' ? '#F4D35E' : '#F4D35E',
+                  color: params.color === 'light' ? '#F4D35E !important' : '#F4D35E !important',
                   backgroundColor: params.color === 'light' ? '#000000' : '#000000',
                   '&:hover': { 
                     textDecoration:'underline',
                     backgroundColor: params.variant === 'filled'
-                      ? '#000000'
-                      : '#000000'
+                      ? '#000000 !important'
+                      : '#000000 !important'
                   }
                 },
               }),
