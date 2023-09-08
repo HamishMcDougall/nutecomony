@@ -10,8 +10,10 @@ export default function App() {
       theme={{
         // Override any other properties from default theme
         headings: {
+          fontFamily: 'ADLaM Display, sans-serif',
           sizes: {
             h2: { fontSize: '3rem', },
+            h3:{ fontSize:'3.5rem',},
           }
         },
         // Override button styles
@@ -22,11 +24,11 @@ export default function App() {
               root: {
                 borderRadius: 20,
                 color: params.color === 'light' ? 'white' : 'white',
-                backgroundColor: params.color === 'light' ? '#F95738' : '#F95738',
+                backgroundColor: params.color === 'light' ? '#000000' : '#000000',
                 '&:hover': { 
                   backgroundColor: params.variant === 'filled'
-                    ? '#FF2900'
-                    : '#FF2900'
+                    ? '#F4D35E'
+                    : '#F4D35E'
                 }
               },
             }),

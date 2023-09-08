@@ -1,43 +1,39 @@
-  import { Container, Flex, Grid, Title, Image, Text } from "@mantine/core";
+  import { Container, Flex, Image, Text, NavLink } from "@mantine/core";
   import { HeroImage } from "./components/HeroImage";
-  import { Clipboard } from "./components/clipboard";
-  import {ClipboardEmpty} from "./components/clipboardEmpty";
+import { MainText } from "./components/mainText";
+import { Roadmap } from "./components/Roadmap";
+import { ClipboardComponent } from "./components/ClipboardComponent";
 
   export default function Main() {
 
-    const projectInfoPeanutz = {
-      projectName: "./peanutz_logo.png", 
-      projectDescription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard Lorem Ipsum is simply dummy text of the printing  Lorem Ipsum is simply dummy text of the ", 
-      projectLinkWeb: "http://www.cashew.io", 
-      projectLinkTelegram: "www.telegram/cashue", 
-      projectLinkTwitter: "twitter.com/cashue", 
-      projectLinkdextools: "www.dex"
-    };
-
-    const projectInfoCashew = {
-      projectName: "./cashew_logo.png", 
-      projectDescription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard Lorem Ipsum is simply dummy text of the printing  Lorem Ipsum is simply dummy text of the ", 
-      projectLinkWeb: "cashue.io", 
-      projectLinkTelegram: "www.telegram/cashue", 
-      projectLinkTwitter: "twitter.com/cashue", 
-      projectLinkdextools: "www.dex"
-    };
-
+   
 
     return (
       <>
-        <Container fluid h={30}></Container>
+        <Container fluid h={70}>
+          <Flex
+          justify="space-between"
+          align="center"
+          mih={70}
+               direction="row"
+         >
+            <div><Image src="./NE_Logo.png" /> </div>
+            <Flex 
+              direction="row"
+              gap="xl"
+            style={{ color: '#F4D35E', fontSize: 26, fontFamily: 'ADLaM Display', wordWrap: 'break-word'}}>
+              <NavLink>Summary</NavLink>
+              <NavLink>Roadmap</NavLink>
+              <NavLink>Projects</NavLink>
+            </Flex>
+          </Flex>
+        </Container>
         <HeroImage />
         <Container>
-        <Title order={2} style={{ fontFamily: "'Londrina Solid', cursive", color:"#FAF0CA" }}>Projects</Title>
-        <Grid>
-          <Grid.Col xs={12} sm={6}> <Clipboard {...projectInfoPeanutz} /></Grid.Col>
-          <Grid.Col xs={12} sm={6}> <Clipboard {...projectInfoCashew} /></Grid.Col>
-          <Grid.Col xs={12} sm={6}><ClipboardEmpty /></Grid.Col>
-          <Grid.Col xs={12} sm={6}><ClipboardEmpty /></Grid.Col>
-          <Grid.Col xs={12} sm={6}><ClipboardEmpty /></Grid.Col>
+        <MainText/>
+        <Roadmap/>
+        <ClipboardComponent/>
 
-        </Grid>
         </Container>
         <Container fluid style={{ marginTop:"20px",  padding:"50px" , backgroundColor:"#0D3B66" }} >
           <Flex direction="column" justify="center" align="center">
