@@ -1,15 +1,48 @@
+import { useState } from 'react';
 import { Link, Element } from 'react-scroll';
-
-
-import { Container, Flex, Image, Text, Button } from "@mantine/core";
+import {  Drawer, Button, Container, Flex, Image } from '@mantine/core';
+import { MdMenu } from 'react-icons/md';
+import { useMediaQuery } from '@mantine/hooks';
 import { HeroImage } from "./components/HeroImage";
 import { MainText } from "./components/mainText";
 import { Roadmap } from "./components/Roadmap";
 import { ClipboardComponent } from "./components/ClipboardComponent";
 
 export default function Main() {
+  const isMobile = useMediaQuery('(max-width: 768px)');
+  const [isOpen, setIsOpen] = useState(false);
 
+  const MenuButton = () => (
+    <Button onClick={() => setIsOpen(true)}>
+      <MdMenu size={30} />
+    </Button>
+  );
 
+  const MenuItems = () => (
+    <Flex
+      direction={isMobile ? 'column' : 'row'}
+      gap="xl"
+      style={{ color: '#F4D35E', fontSize: 26, fontFamily: 'ADLaM Display', wordWrap: 'break-word' }}
+    >
+      <Button variant="menu" radius="xl" size="xl" uppercase style={{marginTop: isMobile? 70:0}}>
+        <Link to="mainText" smooth duration={500} offset={isMobile ? -70 : 0} onClick={() => setIsOpen(false)}>
+          Summary
+        </Link>
+      </Button>
+  
+      <Button variant="menu" radius="xl" size="xl" uppercase>
+        <Link to="Roadmap" smooth duration={500} offset={isMobile ? -70 : 0} onClick={() => setIsOpen(false)}>
+          Roadmap
+        </Link>
+      </Button>
+  
+      <Button variant="menu" radius="xl" size="xl" uppercase>
+        <Link to="Projects" smooth duration={500} offset={isMobile ? -70 : 0} onClick={() => setIsOpen(false)}>
+          Projects
+        </Link>
+      </Button>
+    </Flex>
+  );
 
   return (
     <>
@@ -21,40 +54,26 @@ export default function Main() {
           direction="row"
         >
           <div>
-          <Link to="Home" smooth duration={500} offset={-70}>
-            <Image src="./NE_Logo.png" /> 
-          </Link>
+            <Link to="Home" smooth duration={500} offset={-70}>
+              <Image src="./NE_Logo.png" /> 
+            </Link>
           </div>
-      
-          <Flex
-            direction="row"
-            gap="xl"
-            style={{ color: '#F4D35E', fontSize: 26, fontFamily: 'ADLaM Display', wordWrap: 'break-word' }}>
-            <Button variant="menu"  radius="xl" size="xl" uppercase>
-              <Link to="mainText" smooth duration={500} offset={-70}>
-                Summary
-              </Link>
-            </Button>
 
-            <Button variant="menu" radius="xl" size="xl" uppercase>
-              <Link to="Roadmap" smooth duration={500} offset={-70}>
-              Roadmap
-              </Link>
-            </Button>
-            
-            
-            <Button variant="menu" radius="xl" size="xl" uppercase>
-            <Link to="Projects" smooth duration={500} offset={-70}>
-              Projects
-              </Link>
-            </Button>
-          </Flex>
+          {isMobile ? (
+            <>
+              <MenuButton />
+              <Drawer opened={isOpen} onClose={() => setIsOpen(false)}>
+                <MenuItems />
+              </Drawer>
+            </>
+          ) : (
+            <MenuItems />
+          )}
         </Flex>
       </Container>
       
       <Element name="Home">
         <HeroImage />
-       
       </Element>
       <Container>
         <Element name="mainText">
@@ -69,13 +88,9 @@ export default function Main() {
           <ClipboardComponent />
           <div style={{paddingBottom:'100px'}}></div>
         </Element>
-
-
       </Container>
       <Container fluid style={{ marginTop: "20px", padding: "50px", textAlign: "center" }} >
-
         <div style={{ color: 'white', fontSize: 12, wordWrap: 'break-word' }}>Copyright © 2022 nutecomony. All Rights Reserved.</div>
-
       </Container>
     </>
   );
