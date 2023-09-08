@@ -1,4 +1,4 @@
-  import { Container, Flex, Image, Text, NavLink } from "@mantine/core";
+  import { Container, Flex, Image, Text, Button } from "@mantine/core";
   import { HeroImage } from "./components/HeroImage";
 import { MainText } from "./components/mainText";
 import { Roadmap } from "./components/Roadmap";
@@ -22,9 +22,9 @@ import { ClipboardComponent } from "./components/ClipboardComponent";
               direction="row"
               gap="xl"
             style={{ color: '#F4D35E', fontSize: 26, fontFamily: 'ADLaM Display', wordWrap: 'break-word'}}>
-              <NavLink>Summary</NavLink>
-              <NavLink>Roadmap</NavLink>
-              <NavLink>Projects</NavLink>
+              <Button variant="subtle" color="yellow" radius="xl" size="xl" uppercase>Summary</Button>
+              <Button variant="subtle" color="yellow" radius="xl" size="xl" uppercase>Roadmap</Button>
+              <Button variant="subtle" color="yellow" radius="xl" size="xl" uppercase>Projects</Button>
             </Flex>
           </Flex>
         </Container>
@@ -35,12 +35,10 @@ import { ClipboardComponent } from "./components/ClipboardComponent";
         <ClipboardComponent/>
 
         </Container>
-        <Container fluid style={{ marginTop:"20px",  padding:"50px" , backgroundColor:"#0D3B66" }} >
-          <Flex direction="column" justify="center" align="center">
-          <Image src="./NutE_Logo.png" alt="NutE Logo" width="190px" height="100%" />
-  
-          <Text>Copyright © 2023 nuteconomy. All Rights Reserved.</Text>
-          </Flex>
+        <Container fluid style={{ marginTop:"20px",  padding:"50px", textAlign:"center" }} >
+        
+        <div style={{color: 'white', fontSize: 12, wordWrap: 'break-word'}}>Copyright © 2022 nutecomony. All Rights Reserved.</div>
+   
         </Container>
       </>
     );
