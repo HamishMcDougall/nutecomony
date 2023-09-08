@@ -25,19 +25,19 @@ export default function Main() {
       style={{ color: '#F4D35E', fontSize: 26, fontFamily: 'ADLaM Display', wordWrap: 'break-word' }}
     >
       <Button variant="menu" radius="xl" size="xl" uppercase style={{marginTop: isMobile? 70:0}}>
-        <Link to="mainText" smooth duration={500} offset={isMobile ? -70 : 0} onClick={() => setIsOpen(false)}>
+        <Link to="mainText" smooth duration={500} offset={isMobile ? -70 : -90} onClick={() => setIsOpen(false)}>
           Summary
         </Link>
       </Button>
   
       <Button variant="menu" radius="xl" size="xl" uppercase>
-        <Link to="Roadmap" smooth duration={500} offset={isMobile ? -70 : 0} onClick={() => setIsOpen(false)}>
+        <Link to="Roadmap" smooth duration={500} offset={isMobile ? -70 : -90} onClick={() => setIsOpen(false)}>
           Roadmap
         </Link>
       </Button>
   
       <Button variant="menu" radius="xl" size="xl" uppercase>
-        <Link to="Projects" smooth duration={500} offset={isMobile ? -70 : 0} onClick={() => setIsOpen(false)}>
+        <Link to="Projects" smooth duration={500} offset={isMobile ? -70 : -90} onClick={() => setIsOpen(false)}>
           Projects
         </Link>
       </Button>
