@@ -19,7 +19,6 @@ export default function App() {
         // Override button styles
         components: {
           Button: {
-            // Subscribe to theme and component params
             styles: (theme, params) => ({
               root: {
                 borderRadius: 20,
@@ -32,6 +31,23 @@ export default function App() {
                 }
               },
             }),
+            variants: {
+              menu: (theme, params, context) => ({
+                root: {
+                  fontFamily: 'ADLaM Display',
+                  fontSize: 26,
+                  textTransform: 'uppercase',
+                  color: params.color === 'light' ? '#F4D35E' : '#F4D35E',
+                  backgroundColor: params.color === 'light' ? '#000000' : '#000000',
+                  '&:hover': { 
+                    textDecoration:'underline',
+                    backgroundColor: params.variant === 'filled'
+                      ? '#000000'
+                      : '#000000'
+                  }
+                },
+              }),
+            },
           },
         },
       }}
